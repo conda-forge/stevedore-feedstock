@@ -1,19 +1,22 @@
-{%set version = "1.15.0" %}
 {%set name = "stevedore" %}
+{%set version = "1.17.1" %}
+{%set compress_type = "tar.gz" %}
+{%set hash_type = "sha256" %}
+{%set hash_val = "79414e27ece996b2e81161c1ec91536f2b15645d5f6bd28128724486e1c4b8e3" %}
+{%set build_num = "0" %}
 
 package:
-  name: stevedore
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: stevedore-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b048b7976754ad55d7cbc7407b17cbfd945dbb4c5ecc333d3c2142d506fc90e1
+  fn: {{ name }}-{{ version }}.{{ compress_type }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
+  {{ hash_type }}: {{ hash_val }}
 
 build:
-  number: 0
+  number: {{ build_num }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
-
 
 requirements:
   build:
@@ -23,8 +26,9 @@ requirements:
 
   run:
     - python
-    - six >=1.9.0
     - pbr >=1.6
+    - six >=1.9.0
+
 
 test:
   imports:
