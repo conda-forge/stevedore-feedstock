@@ -21,12 +21,10 @@ build:
 requirements:
   build:
     - python
-    - setuptools
-    - pbr >=1.8
 
   run:
     - python
-    - pbr >=1.6
+    - pbr >=2.0.0
     - six >=1.9.0
 
 
@@ -43,8 +41,12 @@ test:
 
 about:
   home: http://docs.openstack.org/developer/stevedore/
+  license_file: LICENSE
   license: Apache 2.0
+  license_family: Apache
   summary: 'Manage dynamic plugins for Python applications'
+  doc_url: http://docs.openstack.org/developer/stevedore/
+  dev_url: https://git.openstack.org/cgit/openstack/stevedore
 
 extra:
   recipe-maintainers:
