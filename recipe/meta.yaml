@@ -1,8 +1,8 @@
 {%set name = "stevedore" %}
-{%set version = "1.17.1" %}
+{%set version = "1.21.0" %}
 {%set compress_type = "tar.gz" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "79414e27ece996b2e81161c1ec91536f2b15645d5f6bd28128724486e1c4b8e3" %}
+{%set hash_val = "aa0e64490e9eef9f0ae96a3b226f963ebf54bb6a38176472d76253d015424f8b" %}
 {%set build_num = "0" %}
 
 package:
@@ -22,11 +22,11 @@ requirements:
   build:
     - python
     - setuptools
-    - pbr >=1.8
+    - pbr >=2.0.0
 
   run:
     - python
-    - pbr >=1.6
+    - pbr >=2.0.0
     - six >=1.9.0
 
 
@@ -43,8 +43,12 @@ test:
 
 about:
   home: http://docs.openstack.org/developer/stevedore/
+  license_file: LICENSE
   license: Apache 2.0
+  license_family: Apache
   summary: 'Manage dynamic plugins for Python applications'
+  doc_url: http://docs.openstack.org/developer/stevedore/
+  dev_url: https://git.openstack.org/cgit/openstack/stevedore
 
 extra:
   recipe-maintainers:
