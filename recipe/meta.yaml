@@ -1,8 +1,8 @@
 {% set name = "stevedore" %}
-{% set version = "1.23.0" %}
+{% set version = "1.24.0" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "658c17b3b655cc6b6270e7b2d9015dac7ad62d9a3e52c721af7caeed483c9599" %}
+{% set hash = "4f926d66f3bd16483e026e173492075352b70a9ee85ca54965a931cb81560c04" %}
 {% set build = 0 %}
 
 package:
