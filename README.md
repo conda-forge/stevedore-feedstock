@@ -14,12 +14,15 @@ Summary: Manage dynamic plugins for Python applications
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/stevedore-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/stevedore-feedstock)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/stevedore-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/stevedore-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/stevedore/badges/version.svg)](https://anaconda.org/conda-forge/stevedore)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/stevedore/badges/downloads.svg)](https://anaconda.org/conda-forge/stevedore)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-stevedore-green.svg)](https://anaconda.org/conda-forge/stevedore) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/stevedore.svg)](https://anaconda.org/conda-forge/stevedore) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/stevedore.svg)](https://anaconda.org/conda-forge/stevedore) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/stevedore.svg)](https://anaconda.org/conda-forge/stevedore) |
 
 Installing stevedore
 ====================
