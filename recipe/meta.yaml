@@ -1,28 +1,26 @@
 {% set name = "stevedore" %}
-{% set version = "1.28.0" %}
+{% set version = "1.29.0" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "f1c7518e7b160336040fee272174f1f7b29a46febb3632502a8f2055f973d60b" %}
-{% set build = 0 %}
+{% set hash = "1e153545aca7a6a49d8337acca4f41c212fbfa60bf864ecd056df0cafb9627e8" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
   {{ hash_type }}: {{ hash }}
 
 build:
   noarch: python
-  number: {{ build }}
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
-  build:
+  host:
     - python
-    - setuptools
+    - pip
     - pbr !=2.1.0,>=2.0.0
 
   run:
