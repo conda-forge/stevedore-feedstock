@@ -18,15 +18,13 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
     - pbr !=2.1.0,>=2.0.0
 
   run:
-    - python
+    - python >=3.6
     - pbr !=2.1.0,>=2.0.0
-    - six >=1.10.0
-
 
 test:
   imports:
@@ -42,7 +40,7 @@ test:
 about:
   home: http://docs.openstack.org/developer/stevedore/
   license_file: LICENSE
-  license: Apache 2.0
+  license: Apache-2.0
   license_family: Apache
   summary: Manage dynamic plugins for Python applications
   doc_url: http://docs.openstack.org/developer/stevedore/
@@ -52,3 +50,4 @@ extra:
   recipe-maintainers:
     - anguslees
     - pmlandwehr
+    - tschoonj
