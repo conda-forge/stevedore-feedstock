@@ -1,7 +1,7 @@
 {% set name = "stevedore" %}
-{% set version = "2.0.1" %}
+{% set version = "3.0.0" %}
 {% set bundle = "tar.gz" %}
-{% set hash = "609912b87df5ad338ff8e44d13eaad4f4170a65b79ae9cb0aa5632598994a1b7" %}
+{% set hash = "182d557078b4f840f412f148e6f3c2ace83a3e206a020f35f6c97d3b8d91f180" %}
 
 package:
   name: {{ name|lower }}
@@ -12,19 +12,19 @@ source:
   sha256: {{ hash }}
 
 build:
-  noarch: python
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
-    - python >=3.6
+    - python
     - pip
     - pbr !=2.1.0,>=2.0.0
 
   run:
-    - python >=3.6
+    - python
     - pbr !=2.1.0,>=2.0.0
+    - importlib_metadata >=1.7.0  # [py<38]
 
 test:
   imports:
@@ -36,6 +36,7 @@ test:
     - stevedore.enabled
     - stevedore.dispatch
     - stevedore.tests
+    - stevedore._cache
 
 about:
   home: http://docs.openstack.org/developer/stevedore/
