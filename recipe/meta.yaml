@@ -1,7 +1,7 @@
 {% set name = "stevedore" %}
-{% set version = "3.3.0" %}
+{% set version = "3.4.0" %}
 {% set bundle = "tar.gz" %}
-{% set hash = "3a5bbd0652bf552748871eaa73a4a8dc2899786bc497a2aa1fcb4dcdb0debeee" %}
+{% set hash = "59b58edb7f57b11897f150475e7bc0c39c5381f0b8e3fa9f5c20ce6c89ec4aa1" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
