@@ -12,8 +12,8 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 1
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+  number: 2
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   build:
@@ -40,6 +40,10 @@ test:
     - stevedore.dispatch
     - stevedore.tests
     - stevedore._cache
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: http://docs.openstack.org/developer/stevedore/
@@ -53,5 +57,4 @@ about:
 extra:
   recipe-maintainers:
     - anguslees
-    - pmlandwehr
     - tschoonj
