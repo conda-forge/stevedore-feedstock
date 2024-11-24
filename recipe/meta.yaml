@@ -18,12 +18,13 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python 3.9
     - pip
+    - setuptools
     - pbr !=2.1.0,>=2.0.0
 
   run:
-    - python >=3.8
+    - python >=3.9
     - pbr !=2.1.0,>=2.0.0
 
 test:
