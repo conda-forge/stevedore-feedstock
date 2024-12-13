@@ -12,19 +12,19 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
   host:
-    - python 3.9
+    - python {{ python_min }}
     - pip
     - setuptools
     - pbr !=2.1.0,>=2.0.0
 
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - pbr !=2.1.0,>=2.0.0
 
 test:
@@ -40,6 +40,7 @@ test:
     - stevedore._cache
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
