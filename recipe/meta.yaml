@@ -1,7 +1,7 @@
 {% set name = "stevedore" %}
-{% set version = "5.9.0" %}
+{% set version = "5.9.1" %}
 {% set bundle = "tar.gz" %}
-{% set hash = "abbd0af7a38a8bbb1d6adea2e35b17609cf004eaac323e88a8d8963640dd2b3c" %}
+{% set hash = "e97a2667923efda926e8713fde6a73616df68210a3cbc6f02b48967b676fd8bf" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -9,7 +9,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
   sha256: {{ hash }}
 
 build:
